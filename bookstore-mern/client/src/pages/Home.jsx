@@ -35,7 +35,7 @@ const Home = () => {
                     >
                         <source src="/uploads/4.mp4" type="video/mp4" />
                         {/* Fallback to image if video fails or doesn't exist yet */}
-                        <img className="w-full h-full object-cover opacity-30" src="/uploads/image-1771675356855.jpg" alt="Library Background" />
+                        <img className="w-full h-full object-cover opacity-30" src="/uploads/1.jpg" alt="Library Background" />
                     </video>
                 </div>
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 flex flex-col items-center text-center">

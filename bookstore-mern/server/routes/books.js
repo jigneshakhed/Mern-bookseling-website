@@ -39,7 +39,7 @@ router.post('/', protect, admin, async (req, res) => {
             author: req.body.author || 'Sample author',
             description: req.body.description || 'Sample description',
             price: req.body.price || 0,
-            image: req.body.image || '/images/sample.jpg',
+            image: req.body.image || '/images/1.jpg',
             category: req.body.category || 'Sample category',
         });
         const createdBook = await book.save();
