@@ -20,7 +20,7 @@ const About = () => {
                     <div className="relative">
                         <div className="absolute inset-0 bg-indigo-100 transform translate-x-4 translate-y-4 rounded-3xl -z-10"></div>
                         <img
-                            src="/uploads/image-1771675390148.jpg"
+                            src="/uploads/1.jpg"
                             alt="Library Collection"
                             className="rounded-3xl shadow-2xl object-cover h-[500px] w-full"
                         />
