@@ -12,7 +12,7 @@ const ManageUsers = () => {
         const fetchUsers = async () => {
             try {
                 const config = { headers: { Authorization: `Bearer ${authUser.token}` } };
-                const { data } = await axios.get('/api/users', config);
+                const { data } = await axios.get('https://mern-bookseling-website-2.onrender.com/api/users', config);
                 setUsers(data);
                 setLoading(false);
             } catch (error) {
