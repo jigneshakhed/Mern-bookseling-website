@@ -13,7 +13,7 @@ export const blogPosts = [
         `,
         date: "October 10, 2024",
         readTime: "5 min read",
-        imageUrl: "/uploads/image-1771586054218.jpg"
+        imageUrl: "/uploads/1.jpg"
     },
     {
         id: 2,
@@ -30,7 +30,7 @@ export const blogPosts = [
         `,
         date: "September 28, 2024",
         readTime: "4 min read",
-        imageUrl: "/uploads/image-1771675378183.jpg"
+        imageUrl: "/uploads/2.jpg"
     },
     {
         id: 3,
@@ -49,6 +49,6 @@ export const blogPosts = [
         `,
         date: "September 15, 2024",
         readTime: "7 min read",
-        imageUrl: "/uploads/image-1772079906829.jpg"
+        imageUrl: "/uploads/3.png"
     }
 ];
