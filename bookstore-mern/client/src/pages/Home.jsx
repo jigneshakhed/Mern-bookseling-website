@@ -12,7 +12,7 @@ const Home = () => {
     useEffect(() => {
         const fetchBooks = async () => {
             try {
-                const { data } = await axios.get('/api/books');
+                const { data } = await axios.get('https://mern-bookseling-website-2.onrender.com/api/books');
                 setFeaturedBooks(data.slice(0, 4));
             } catch (error) {
                 console.error('Error fetching featured books:', error);

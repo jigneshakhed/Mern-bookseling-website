@@ -3,7 +3,7 @@ const router = express.Router();
 const Book = require('../models/Book');
 const { protect, admin } = require('../middleware/auth');
 
-// @route   GET /api/books
+// @route   GET https://mern-bookseling-website-2.onrender.com/api/books
 router.get('/', async (req, res) => {
     try {
         const keyword = req.query.keyword
@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// @route   GET /api/books/:id
+// @route   GET https://mern-bookseling-website-2.onrender.com/api/books/:id
 router.get('/:id', async (req, res) => {
     try {
         const book = await Book.findById(req.params.id);
@@ -30,7 +30,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-// @route   POST /api/books
+// @route   POST https://mern-bookseling-website-2.onrender.com/api/books
 // @desc    Admin create book
 router.post('/', protect, admin, async (req, res) => {
     try {
@@ -49,7 +49,7 @@ router.post('/', protect, admin, async (req, res) => {
     }
 });
 
-// @route   PUT /api/books/:id
+// @route   PUT https://mern-bookseling-website-2.onrender.com/api/books/:id
 // @desc    Admin update book
 router.put('/:id', protect, admin, async (req, res) => {
     try {
@@ -74,7 +74,7 @@ router.put('/:id', protect, admin, async (req, res) => {
     }
 });
 
-// @route   DELETE /api/books/:id
+// @route   DELETE https://mern-bookseling-website-2.onrender.com/api/books/:id
 // @desc    Admin delete book
 router.delete('/:id', protect, admin, async (req, res) => {
     try {

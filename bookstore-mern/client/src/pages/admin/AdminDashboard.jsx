@@ -26,9 +26,9 @@ const AdminDashboard = () => {
                 try {
                     const config = { headers: { Authorization: `Bearer ${user.token}` } };
                     const [booksRes, ordersRes, usersRes] = await Promise.all([
-                        axios.get('/api/books'),
-                        axios.get('/api/orders', config),
-                        axios.get('/api/users', config)
+                        axios.get('https://mern-bookseling-website-2.onrender.com/api/books'),
+                        axios.get('https://mern-bookseling-website-2.onrender.com/api/orders', config),
+                        axios.get('https://mern-bookseling-website-2.onrender.com/api/users', config)
                     ]);
 
                     const revenue = ordersRes.data

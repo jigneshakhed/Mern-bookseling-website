@@ -22,7 +22,7 @@ const ManageBooks = () => {
 
         try {
             const config = { headers: { 'Content-Type': 'multipart/form-data' } };
-            const { data } = await axios.post('/api/upload', uploadData, config);
+            const { data } = await axios.post('https://mern-bookseling-website-2.onrender.com/api/upload', uploadData, config);
             setFormData(prev => ({ ...prev, image: data }));
             setUploading(false);
         } catch (error) {
@@ -33,7 +33,7 @@ const ManageBooks = () => {
 
     const fetchBooks = async () => {
         try {
-            const { data } = await axios.get('/api/books');
+            const { data } = await axios.get('https://mern-bookseling-website-2.onrender.com/api/books');
             setBooks(data);
         } catch (error) {
             console.error('Error fetching books', error);
@@ -69,9 +69,9 @@ const ManageBooks = () => {
             const config = { headers: { Authorization: `Bearer ${user.token}` } };
 
             if (editingBook) {
-                await axios.put(`/api/books/${editingBook._id}`, formData, config);
+                await axios.put(`https://mern-bookseling-website-2.onrender.com/api/books/${editingBook._id}`, formData, config);
             } else {
-                await axios.post('/api/books', formData, config);
+                await axios.post('https://mern-bookseling-website-2.onrender.com/api/books', formData, config);
             }
 
             handleCloseModal();
@@ -86,7 +86,7 @@ const ManageBooks = () => {
         if (window.confirm('Are you sure you want to delete this book?')) {
             try {
                 const config = { headers: { Authorization: `Bearer ${user.token}` } };
-                await axios.delete(`/api/books/${id}`, config);
+                await axios.delete(`https://mern-bookseling-website-2.onrender.com/api/books/${id}`, config);
                 fetchBooks();
             } catch (error) {
                 console.error('Error deleting book', error);

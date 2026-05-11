@@ -22,7 +22,7 @@ const ResetPassword = () => {
         setMessage('');
 
         try {
-            const res = await fetch(`/api/auth/reset-password/${token}`, {
+            const res = await fetch(`https://mern-bookseling-website-2.onrender.com/api/auth/reset-password/${token}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ password })

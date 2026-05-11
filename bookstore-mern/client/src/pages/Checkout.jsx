@@ -42,7 +42,7 @@ const Checkout = () => {
                 },
             };
 
-            await axios.post('/api/orders', orderData, config);
+            await axios.post('https://mern-bookseling-website-2.onrender.com/api/orders', orderData, config);
             clearCart();
             setLoading(false);
             navigate('/myorders');

@@ -11,7 +11,7 @@ const generateToken = (id) => {
     });
 };
 
-// @route   POST /api/auth/register
+// @route   POST https://mern-bookseling-website-2.onrender.com/api/auth/register
 // ... (rest of the code remains similar, but I'll replace the whole block for safety)
 router.post('/register', async (req, res) => {
     try {
@@ -37,7 +37,7 @@ router.post('/register', async (req, res) => {
     }
 });
 
-// @route   POST /api/auth/login
+// @route   POST https://mern-bookseling-website-2.onrender.com/api/auth/login
 router.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -58,7 +58,7 @@ router.post('/login', async (req, res) => {
     }
 });
 
-// @route   POST /api/auth/forgot-password
+// @route   POST https://mern-bookseling-website-2.onrender.com/api/auth/forgot-password
 router.post('/forgot-password', async (req, res) => {
     try {
         const { email } = req.body;
@@ -81,7 +81,7 @@ router.post('/forgot-password', async (req, res) => {
     }
 });
 
-// @route   POST /api/auth/reset-password/:token
+// @route   POST https://mern-bookseling-website-2.onrender.com/api/auth/reset-password/:token
 router.post('/reset-password/:token', async (req, res) => {
     try {
         const resetPasswordToken = crypto.createHash('sha256').update(req.params.token).digest('hex');
@@ -106,7 +106,7 @@ router.post('/reset-password/:token', async (req, res) => {
     }
 });
 
-// @route   POST /api/auth/change-password
+// @route   POST https://mern-bookseling-website-2.onrender.com/api/auth/change-password
 router.post('/change-password', async (req, res) => {
     try {
         const { email, currentPassword, newPassword } = req.body;

@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
         try {
-            const { data } = await axios.post('/api/auth/login', { email, password });
+            const { data } = await axios.post('https://mern-bookseling-website-2.onrender.com/api/auth/login', { email, password });
             setUser(data);
             localStorage.setItem('userInfo', JSON.stringify(data));
             return { success: true };
@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
 
     const register = async (name, email, password) => {
         try {
-            const { data } = await axios.post('/api/auth/register', { name, email, password });
+            const { data } = await axios.post('https://mern-bookseling-website-2.onrender.com/api/auth/register', { name, email, password });
             setUser(data);
             localStorage.setItem('userInfo', JSON.stringify(data));
             return { success: true };

@@ -10,16 +10,16 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/books', require('./routes/books'));
-app.use('/api/orders', require('./routes/orders'));
+app.use('https://mern-bookseling-website-2.onrender.com/api/auth', require('./routes/auth'));
+app.use('https://mern-bookseling-website-2.onrender.com/api/books', require('./routes/books'));
+app.use('https://mern-bookseling-website-2.onrender.com/api/orders', require('./routes/orders'));
 const uploadRoutes = require('./routes/uploadRoutes'); // Added uploadRoutes import
 const userRoutes = require('./routes/users');
 
-app.use('/api/upload', uploadRoutes); // Mounted uploadRoutes
-app.use('/api/users', userRoutes);
-app.use('/api/contact', require('./routes/contact'));
-app.use('/api/feedback', require('./routes/feedback'));
+app.use('https://mern-bookseling-website-2.onrender.com/api/upload', uploadRoutes); // Mounted uploadRoutes
+app.use('https://mern-bookseling-website-2.onrender.com/api/users', userRoutes);
+app.use('https://mern-bookseling-website-2.onrender.com/api/contact', require('./routes/contact'));
+app.use('https://mern-bookseling-website-2.onrender.com/api/feedback', require('./routes/feedback'));
 
 // Serve static files from the 'uploads' directory
 app.use('/uploads', express.static(path.join(__dirname, '/uploads'))); // Serve /uploads statically

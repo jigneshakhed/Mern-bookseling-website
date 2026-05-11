@@ -3,7 +3,7 @@ const router = express.Router();
 const Order = require('../models/Order');
 const { protect, admin } = require('../middleware/auth');
 
-// @route   POST /api/orders
+// @route   POST https://mern-bookseling-website-2.onrender.com/api/orders
 // @desc    Create new order
 router.post('/', protect, async (req, res) => {
     try {
@@ -27,7 +27,7 @@ router.post('/', protect, async (req, res) => {
     }
 });
 
-// @route   GET /api/orders/myorders
+// @route   GET https://mern-bookseling-website-2.onrender.com/api/orders/myorders
 // @desc    Get logged in user orders
 router.get('/myorders', protect, async (req, res) => {
     try {
@@ -38,7 +38,7 @@ router.get('/myorders', protect, async (req, res) => {
     }
 });
 
-// @route   GET /api/orders
+// @route   GET https://mern-bookseling-website-2.onrender.com/api/orders
 // @desc    Get all orders (Admin area)
 router.get('/', protect, admin, async (req, res) => {
     try {
@@ -49,7 +49,7 @@ router.get('/', protect, admin, async (req, res) => {
     }
 });
 
-// @route   PUT /api/orders/:id/status
+// @route   PUT https://mern-bookseling-website-2.onrender.com/api/orders/:id/status
 // @desc    Update order status
 router.put('/:id/status', protect, admin, async (req, res) => {
     try {
@@ -66,7 +66,7 @@ router.put('/:id/status', protect, admin, async (req, res) => {
     }
 });
 
-// @route   PUT /api/orders/:id/cancel
+// @route   PUT https://mern-bookseling-website-2.onrender.com/api/orders/:id/cancel
 // @desc    Cancel order (User)
 router.put('/:id/cancel', protect, async (req, res) => {
     try {

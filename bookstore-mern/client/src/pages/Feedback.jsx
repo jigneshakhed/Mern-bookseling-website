@@ -12,7 +12,7 @@ const Feedback = () => {
 
     const fetchFeedbacks = async () => {
         try {
-            const response = await fetch('/api/feedback');
+            const response = await fetch('https://mern-bookseling-website-2.onrender.com/api/feedback');
             if (response.ok) {
                 const data = await response.json();
                 setFeedbacks(data);
@@ -25,7 +25,7 @@ const Feedback = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('/api/feedback', {
+            const response = await fetch('https://mern-bookseling-website-2.onrender.com/api/feedback', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -18,7 +18,7 @@ const ManageFeedback = () => {
             const config = {
                 headers: { Authorization: `Bearer ${user.token}` }
             };
-            const { data } = await axios.get('/api/feedback/admin', config);
+            const { data } = await axios.get('https://mern-bookseling-website-2.onrender.com/api/feedback/admin', config);
             setFeedbacks(data);
             setLoading(false);
         } catch (err) {
@@ -33,7 +33,7 @@ const ManageFeedback = () => {
                 const config = {
                     headers: { Authorization: `Bearer ${user.token}` }
                 };
-                await axios.delete(`/api/feedback/${id}`, config);
+                await axios.delete(`https://mern-bookseling-website-2.onrender.com/api/feedback/${id}`, config);
                 fetchFeedbacks();
             } catch (err) {
                 alert(err.response?.data?.message || err.message);
@@ -46,7 +46,7 @@ const ManageFeedback = () => {
             const config = {
                 headers: { Authorization: `Bearer ${user.token}` }
             };
-            await axios.put(`/api/feedback/${id}/status`, { status }, config);
+            await axios.put(`https://mern-bookseling-website-2.onrender.com/api/feedback/${id}/status`, { status }, config);
             fetchFeedbacks();
         } catch (err) {
             alert(err.response?.data?.message || err.message);

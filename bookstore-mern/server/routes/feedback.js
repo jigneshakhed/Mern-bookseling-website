@@ -3,7 +3,7 @@ const router = express.Router();
 const Feedback = require('../models/Feedback');
 const { protect, admin } = require('../middleware/auth');
 
-// @route   POST api/feedback
+// @route   POST https://mern-bookseling-website-2.onrender.com/api/feedback
 // @desc    Submit a feedback
 // @access  Public
 router.post('/', async (req, res) => {
@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// @route   GET api/feedback
+// @route   GET https://mern-bookseling-website-2.onrender.com/api/feedback
 // @desc    Get all approved feedback (for user side)
 // @access  Public
 router.get('/', async (req, res) => {
@@ -43,7 +43,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// @route   GET api/feedback/admin
+// @route   GET https://mern-bookseling-website-2.onrender.com/api/feedback/admin
 // @desc    Get all feedback (for admin side)
 // @access  Private/Admin
 router.get('/admin', protect, admin, async (req, res) => {
@@ -56,7 +56,7 @@ router.get('/admin', protect, admin, async (req, res) => {
     }
 });
 
-// @route   PUT api/feedback/:id/status
+// @route   PUT https://mern-bookseling-website-2.onrender.com/api/feedback/:id/status
 // @desc    Update feedback status
 // @access  Private/Admin
 router.put('/:id/status', protect, admin, async (req, res) => {
@@ -77,7 +77,7 @@ router.put('/:id/status', protect, admin, async (req, res) => {
     }
 });
 
-// @route   DELETE api/feedback/:id
+// @route   DELETE https://mern-bookseling-website-2.onrender.com/api/feedback/:id
 // @desc    Delete a feedback
 // @access  Private/Admin
 router.delete('/:id', protect, admin, async (req, res) => {

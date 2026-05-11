@@ -3,7 +3,7 @@ const router = express.Router();
 const Contact = require('../models/Contact');
 const { protect, admin } = require('../middleware/auth');
 
-// @route   POST api/contact
+// @route   POST https://mern-bookseling-website-2.onrender.com/api/contact
 // @desc    Submit a contact form message
 // @access  Public
 router.post('/', async (req, res) => {
@@ -28,7 +28,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// @route   GET api/contact
+// @route   GET https://mern-bookseling-website-2.onrender.com/api/contact
 // @desc    Get all contact messages
 // @access  Private/Admin
 router.get('/', protect, admin, async (req, res) => {
@@ -41,7 +41,7 @@ router.get('/', protect, admin, async (req, res) => {
     }
 });
 
-// @route   DELETE api/contact/:id
+// @route   DELETE https://mern-bookseling-website-2.onrender.com/api/contact/:id
 // @desc    Delete a contact message
 // @access  Private/Admin
 router.delete('/:id', protect, admin, async (req, res) => {

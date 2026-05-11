@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     proxy: {
-      '/api': {
+      'https://mern-bookseling-website-2.onrender.com/api': {
         target: 'http://localhost:5000',
         changeOrigin: true
       },

@@ -14,7 +14,7 @@ const Books = () => {
         const fetchBooks = async () => {
             setLoading(true);
             try {
-                const { data } = await axios.get(`/api/books?keyword=${keyword}`);
+                const { data } = await axios.get(`https://mern-bookseling-website-2.onrender.com/api/books?keyword=${keyword}`);
                 setBooks(data);
             } catch (error) {
                 console.error('Error fetching books:', error);

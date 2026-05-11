@@ -12,7 +12,7 @@ const MyOrders = () => {
         const fetchOrders = async () => {
             try {
                 const config = { headers: { Authorization: `Bearer ${user.token}` } };
-                const { data } = await axios.get('/api/orders/myorders', config);
+                const { data } = await axios.get('https://mern-bookseling-website-2.onrender.com/api/orders/myorders', config);
                 setOrders(data);
                 setLoading(false);
             } catch (error) {
@@ -30,7 +30,7 @@ const MyOrders = () => {
         if (window.confirm('Are you sure you want to cancel this order?')) {
             try {
                 const config = { headers: { Authorization: `Bearer ${user.token}` } };
-                await axios.put(`/api/orders/${id}/cancel`, {}, config);
+                await axios.put(`https://mern-bookseling-website-2.onrender.com/api/orders/${id}/cancel`, {}, config);
                 setOrders(orders.map(order =>
                     order._id === id ? { ...order, status: 'cancelled' } : order
                 ));

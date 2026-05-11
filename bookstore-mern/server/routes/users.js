@@ -4,7 +4,7 @@ const User = require('../models/User');
 const { protect, admin } = require('../middleware/auth');
 
 // @desc    Get all users
-// @route   GET /api/users
+// @route   GET https://mern-bookseling-website-2.onrender.com/api/users
 // @access  Private/Admin
 router.get('/', protect, admin, async (req, res) => {
     try {

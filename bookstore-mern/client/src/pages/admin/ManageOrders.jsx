@@ -10,7 +10,7 @@ const ManageOrders = () => {
     const fetchOrders = async () => {
         try {
             const config = { headers: { Authorization: `Bearer ${user.token}` } };
-            const { data } = await axios.get('/api/orders', config);
+            const { data } = await axios.get('https://mern-bookseling-website-2.onrender.com/api/orders', config);
             setOrders(data);
         } catch (error) {
             console.error('Error fetching orders', error);
@@ -25,7 +25,7 @@ const ManageOrders = () => {
     const updateStatus = async (id, status) => {
         try {
             const config = { headers: { Authorization: `Bearer ${user.token}` } };
-            await axios.put(`/api/orders/${id}/status`, { status }, config);
+            await axios.put(`https://mern-bookseling-website-2.onrender.com/api/orders/${id}/status`, { status }, config);
             fetchOrders();
         } catch (error) {
             console.error('Error updating status', error);

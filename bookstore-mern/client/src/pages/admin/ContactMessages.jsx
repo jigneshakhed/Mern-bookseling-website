@@ -19,7 +19,7 @@ const ContactMessages = () => {
                     Authorization: `Bearer ${user.token}`
                 }
             };
-            const { data } = await axios.get('/api/contact', config);
+            const { data } = await axios.get('https://mern-bookseling-website-2.onrender.com/api/contact', config);
             setMessages(data);
             setLoading(false);
         } catch (error) {
@@ -36,7 +36,7 @@ const ContactMessages = () => {
                         Authorization: `Bearer ${user.token}`
                     }
                 };
-                await axios.delete(`/api/contact/${id}`, config);
+                await axios.delete(`https://mern-bookseling-website-2.onrender.com/api/contact/${id}`, config);
                 setMessages(messages.filter(msg => msg._id !== id));
             } catch (error) {
                 console.error('Error deleting message:', error);
